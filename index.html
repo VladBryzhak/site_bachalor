@@ -22,6 +22,11 @@
     <div class="header-container container">
       <nav class="page-nav">
         <a class="web-studio-link link" href="./index.html">Аналізатор<span class="logo-span-header">Сайтів</span></a>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="burger-btn" width="32" height="22">
+            <use href="./images/icons.svg#burger-icon"></use>
+          </svg>
+        </button>
         <ul class="header-nav-list list">
           <li class="nav-item">
             <a class="nav-link link active" href="./index.html">Головна</a>
@@ -30,17 +35,17 @@
             <a class="nav-link link" href="./second_page.html">Аналіз за текстом</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link" href="">Contacts</a>
+            <a class="nav-link link" href="./about_us.html">Про нас</a>
           </li>
         </ul>
       </nav>
       <address class="address">
         <ul class="adr-list list">
           <li class="adr-item">
-            <a class="contact-link contact-link  link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <a class="contact-link contact-link  link" href="mailto:info@devstudio.com">SiteAnalizator@gmail.com</a>
           </li>
           <li class="adr-item">
-            <a class="contact-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            <a class="contact-link link" href="tel:+110001111111">+38 096 009-78-74</a>
           </li>
         </ul>
       </address>
@@ -54,6 +59,135 @@
     <button onclick="analyze()">Аналізувати</button>
     <div id="result" class="result-box"></div>
   </div>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-main">
+        <a class="web-studio-footer-link link" href="./index.html">Аналізатор<span
+            class="logo-span-footer">Сайтів</span></a>
+        <p class="footer-desc">
+          Легкий і доступний спосіб визначитись із технологією розробки вашого сайту!
+        </p>
+      </div>
+      <div class="footer-social">
+        <p class="footer-subtitle">Наші соціальні мережі:</p>
+        <ul class="footer-social-list list">
+          <li class="footer-social-item">
+            <a class="footer-social-link link" href="https://www.instagram.com/donnu_vin/" target="_blank"
+              rel="noopener noreferrer">
+              <svg class="footer-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link link" href="https://twitter.com/donnu_edu_ua" target="_blank"
+              rel="noopener noreferrer">
+              <svg class="footer-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link link" href="https://www.facebook.com/donnu.edu.ua/" target="_blank"
+              rel="noopener noreferrer">
+              <svg class="footer-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link link" href="https://ua.linkedin.com/" target="_blank"
+              rel="noopener noreferrer">
+              <svg class="footer-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-subcscribe">
+        <p class="footer-form-title">Підпишіться на оновлення новин нашого сайту!</p>
+        <form class="footer-form">
+          <div class="footer-form-wrapper">
+            <label for="footer-user-email"></label>
+            <input class="footer-form-field" type="text" id="footer-user-email" name="email" placeholder="E-mail">
+          </div>
+          <button class="footer-form-btn" type="submit">Підписатися!
+            <svg class="footer-btn-icon" width="24" height="24">
+              <use href="./images/icons.svg#subscribe"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </footer>
+  <!-- Mobile-menu -->
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle mob-close-btn js-close-menu">
+      <svg class="modal-close-icon" width="8" height="8">
+        <use href="./images/icons.svg#close-icon"></use>
+      </svg>
+    </button>
+    <ul class="mobile-menu list">
+      <li class="mobile-menu-item">
+        <a class="mobile-menu-link link active" href="./index.html">Studio</a>
+      </li>
+      <li class="mobile-menu-item">
+        <a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a>
+      </li>
+      <li class="mobile-menu-item">
+        <a class="mobile-menu-link link" href="">Contacts</a>
+      </li>
+    </ul>
+    <ul class="mobile-contacts list">
+      <li class="mobile-contacts-item">
+        <a class="phone-contact-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+      </li>
+      <li class="mobile-contacts-item">
+        <a class="mail-contact-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+      </li>
+    </ul>
+    <ul class="mobile-social list">
+      <li class="footer-social-item">
+        <a class="footer-social-link link" href="https://www.instagram.com/donnu_vin/" target="_blank"
+          rel="noopener noreferrer">
+          <svg class="footer-social-icon" width="24" height="24">
+            <use href="./images/icons.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-social-item">
+        <a class="footer-social-link link" href="https://twitter.com/donnu_edu_ua" target="_blank"
+          rel="noopener noreferrer">
+          <svg class="footer-social-icon" width="24" height="24">
+            <use href="./images/icons.svg#twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-social-item">
+        <a class="footer-social-link link" href="https://www.facebook.com/donnu.edu.ua/" target="_blank"
+          rel="noopener noreferrer">
+          <svg class="footer-social-icon" width="24" height="24">
+            <use href="./images/icons.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-social-item">
+        <a class="footer-social-link link" href="https://ua.linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <svg class="footer-social-icon" width="24" height="24">
+            <use href="./images/icons.svg#linkedin"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script src="./JS/modal.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script src="./JS/mobile-menu.js"></script>
 
 </body>
 
