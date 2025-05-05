@@ -1,0 +1,272 @@
+
+body {
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+  background-color: var(--white);
+
+}
+
+:root {
+  --iris: #4D5AE5;
+  --ocean: #404BBF;
+  --navy-blue: #2E2F42;
+  --green: #31D0AA;
+  --slate: #434455;
+  --light-slate: #8E8F99;
+  --cornflower: #E7E9FC;
+  --cloud: #F4F4FD;
+  --navy-blue-modal: #2E2F42;
+  --grey: #2E2F42;
+  --white: #FFFFFF;
+  --dairy: #FCFCFC;
+  --main-font: "Roboto", sans-serif;
+  --logo-font: "Raleway", sans-serif;
+  --modal-bg-color: #fcfcfc;
+  --modal-bg-button: #e7e9fc;
+
+  --transition-func-and-dur: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 428px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
+
+textarea {
+  width: 98%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.result-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e8f5e9;
+  border-left: 5px solid #2e7d32;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2e7d32;
+}
+
+
+/*header*/
+
+.header {
+  border-bottom: 1px solid var(--cornflower);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.page-nav {
+  display: flex;
+  margin-right: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .page-nav {
+    width: 100%;
+  }
+}
+
+.web-studio-link {
+  padding-top: 24px;
+  padding-bottom: 22px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--iris);
+}
+
+.logo-span-header {
+  color: var(--navy-blue);
+}
+
+.logo-span-footer {
+  color: var(--cloud);
+}
+
+@media screen and (min-width: 768px) {
+  .web-studio-link {
+    margin-right: 120px;
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .web-studio-link {
+    margin-right: 76px;
+  }
+}
+
+.burger-btn {
+  stroke: var(--navy-blue);
+}
+
+.header-nav-list {
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 40px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+  position: relative;
+  transition: color var(--transition-func-and-dur);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--ocean);
+}
+
+.nav-link.active {
+  color: var(--ocean);
+}
+
+.nav-link.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--ocean);
+}
+
+.address {
+  display: flex;
+  font-style: normal;
+}
+
+@media screen and (max-width: 767px) {
+  .address {
+    display: none;
+  }
+}
+
+.adr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-style: normal;
+}
+
+@media screen and (min-width: 1158px) {
+  .adr-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 0;
+  }
+}
+
+.contact-link {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: var(--slate);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-func-and-dur);
+}
+
+@media screen and (min-width: 1158px) {
+  .contact-link {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--ocean);
+}

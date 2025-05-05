@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АналізаторСайтів</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&amp;family=Roboto:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="
+          https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container container">
+            <nav class="page-nav">
+                <a class="web-studio-link link" href="./index.html">Аналізатор<span
+                        class="logo-span-header">Сайтів</span></a>
+                <ul class="header-nav-list list">
+                    <li class="nav-item">
+                        <a class="nav-link link active" href="./index.html">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link" href="./second_page.html">Аналіз за текстом</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link" href="">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <address class="address">
+                <ul class="adr-list list">
+                    <li class="adr-item">
+                        <a class="contact-link contact-link  link"
+                            href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="adr-item">
+                        <a class="contact-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                    </li>
+                </ul>
+            </address>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>📝 Аналіз опису/тексту</h1>
+        <textarea id="textInput" rows="4" placeholder="Введіть опис сайту або функціоналу..."></textarea>
+        <button onclick="analyzeText()">Аналізувати текст</button>
+        <div class="result" id="textResult"></div>
+    </div>
+
+    <script>
+        async function analyzeText() {
+            const text = document.getElementById('textInput').value;
+            const res = await fetch('http://localhost:3000/analyze-text', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text })
+            });
+            const data = await res.json();
+            document.getElementById('textResult').innerText = data.result;
+        }
+    </script>
+</body>
+
+
+</html>
